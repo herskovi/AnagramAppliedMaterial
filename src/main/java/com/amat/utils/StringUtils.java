@@ -5,7 +5,7 @@ public class StringUtils
 	
 	public static boolean isStringWithOnlyCharacters(String text)
 	{
-		return  (!text.matches("[a-zA-Z]*") ? false : true);
+		return  (!text.matches("[a-zA-Z]*") ? false : true); 
 	}
 	
 	public static boolean isStringBlank(String text)

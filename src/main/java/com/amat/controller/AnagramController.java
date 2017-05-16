@@ -20,13 +20,13 @@ public class AnagramController
 
 	public String isStringAnagram(String text)
 	{
-		String str =null;
+		String str = null;
 
-		if (validateInput(text))
+		if (validateInput(text)) 
 		{
 			text = text.toLowerCase();
 			str = Anagram.getInstance().isWordExistsInLexicographicalDictionary(SortUtils.convertStringToLexicographical(text));
-			return str;
+			return (str ==  null ? null : (str.length() > 0 ? str : null)) ;
 		}
 		return str;
 
@@ -51,9 +51,9 @@ public class AnagramController
 
 		} catch (Exception e) 
 		{
-			System.out.println("Exception was caught  " + e.getMessage());
+			System.out.println("Exception was caught at " + e.getMessage());
 		}
-		return validationPass;
+		return validationPass; 
 	}
 
 

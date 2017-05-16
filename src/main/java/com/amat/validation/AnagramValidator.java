@@ -10,7 +10,7 @@ public class AnagramValidator extends Validator
 	public AnagramValidator(String text) 
 	{
 		super();
-		this.text = text;
+		this.text = text; 
 	}
 	public AnagramValidator() 
 	{

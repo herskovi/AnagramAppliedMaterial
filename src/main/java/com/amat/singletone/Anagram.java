@@ -24,6 +24,7 @@ public class Anagram  implements IAnagram
 {
 	private DictionaryImpl  dictionary = new DictionaryImpl(); 
 	private ConcurrentMap<String,String>  lexicographicalDictionary = new ConcurrentHashMap<String,String>();
+
     private static Anagram instance;
     private static int maxLettersInEntireDictionary = 0;
     private static int minLettersInEntireDictionary = 5;
@@ -129,9 +130,9 @@ public class Anagram  implements IAnagram
 	 * @Date:        16-May-2017
 	 */
     
-    public String iWordExistsInLexicographicalDictionary(String text)
+    public String getOriginalWordByLexicographicalDictionary(String lexicographical)
     {
-    	return lexicographicalDictionary.get(SortUtils.convertStringToLexicographical(text));
+    	return lexicographicalDictionary.get(lexicographical);
     }
     
     

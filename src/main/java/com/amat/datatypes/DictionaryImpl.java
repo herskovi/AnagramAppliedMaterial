@@ -6,7 +6,7 @@ import java.util.HashMap;
 import com.amat.consts.Consts;
 import com.amat.interfaces.IDictionary;
 
-public class DictionaryImpl implements IDictionary 
+public class DictionaryImpl implements IDictionary  
 {
 	private  ArrayList<String>  dictionary = new ArrayList<String>();
     private  String languagesName = Consts.DEAFUALT_LANGUAGE_IS_ENGLISH;

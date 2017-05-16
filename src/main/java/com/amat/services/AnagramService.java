@@ -33,8 +33,8 @@ public class AnagramService
 					@Override
 					public String call() {
 						try {
-							AnagramController anagramController = new AnagramController();
-							String isStringAnagram = anagramController.isStringAnagram(word);
+							AnagramController anagramController = new AnagramController(); 
+							String isStringAnagram = anagramController.isStringAnagram(word);  
 							//System.out.println("Ended: "+  Thread.currentThread() + " at " + new Date());
 							sb.append(word);
 							sb.append(" @@@@@@@@@@@@@ is "); 
