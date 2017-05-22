@@ -1,4 +1,6 @@
 package com.amat.services;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.concurrent.Callable;
 import java.util.concurrent.CompletionService;
 import java.util.concurrent.ExecutionException;
@@ -14,11 +16,13 @@ import com.amat.singletone.Anagram;
 public class AnagramService 
 {
 
-	public void anagramService(final Executor exec, String[] args) 
+	public List<String> anagramService(final Executor exec, String[] args) 
 	{
+		
 
 		if (!(ArrayUtils.isEmpty(args)))
 		{
+			List list = new ArrayList<String>(args.length);
 			Anagram.getInstance();//initialize the singletone;
 			int size = args.length;
 			CompletionService<String> completionService = new ExecutorCompletionService<>(exec);
@@ -60,12 +64,15 @@ public class AnagramService
 				try {
 					f = completionService.take();
 					System.out.println( f.get());
+					list.add(f.get());
 				} catch (InterruptedException | ExecutionException e) {
 					e.printStackTrace();
 				}
 			}
+			return list;
 			
 		}
+		return null;
 		
 	}
 }

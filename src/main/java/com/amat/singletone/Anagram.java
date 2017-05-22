@@ -135,11 +135,25 @@ public class Anagram  implements IAnagram
     	return lexicographicalDictionary.get(lexicographical);
     }
     
+    /**
+	 * @author:      Moshe Herskovits
+	 * @Descreption: Receive the maximum characters in one  word on entire dictionary. 
+	 * 				 
+	 * @Date:        16-May-2017
+	 */
+    
     
     public int getMaxLettersInDictionary()
     {
     	return maxLettersInEntireDictionary;
     }
+    
+    
+    /**
+	 * @author:      Moshe Herskovits
+	 * @Descreption: Receive the minimum characters in one word on entire dictionary. 
+	 * @Date:        16-May-2017
+	 */
     
     public int getMinLettersInDictionary()
     {
